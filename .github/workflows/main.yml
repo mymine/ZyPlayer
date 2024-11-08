@@ -52,19 +52,19 @@ jobs:
           path: |
             ./dist/*-arm64.deb
           if-no-files-found: ignore
-      - name: Upload Artifact (Linux-aarch64-rpm)
-        uses: actions/upload-artifact@v4
-        with:
-          name: zyplayer-linux-aarch64-rpm
-          path: |
-            ./dist/*-aarch64.rpm
-          if-no-files-found: ignore
       - name: Upload Artifact (Linux-x86_64-rpm)
         uses: actions/upload-artifact@v4
         with:
           name: zyplayer-linux-x86_64-rpm
           path: |
             ./dist/*-x86_64.rpm
+          if-no-files-found: ignore
+      - name: Upload Artifact (Linux-aarch64-rpm)
+        uses: actions/upload-artifact@v4
+        with:
+          name: zyplayer-linux-aarch64-rpm
+          path: |
+            ./dist/*-aarch64.rpm
           if-no-files-found: ignore
       - name: Upload Artifact (Linux-x86_64-AppImage)
         uses: actions/upload-artifact@v4
